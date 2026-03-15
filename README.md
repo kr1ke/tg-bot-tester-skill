@@ -45,30 +45,6 @@ Or just describe what you need in natural language:
 "verify bot behavior after the last changes"
 ```
 
-## ⚙️ How It Works
-
-| Phase | Description |
-|-------|-------------|
-| 1. Reconnaissance | Reads bot code to map commands, handlers, data store, and expected behavior |
-| 2. Environment Check | Verifies the bot process and data store are running |
-| 3. Browser Interaction | Opens the bot in Telegram Web, sends commands, clicks buttons |
-| 4. Data Verification | Cross-references UI responses with actual DB/store records |
-| 5. Log Analysis | Checks for exceptions, API errors, and warnings |
-| 6. Test Report | Outputs a structured verdict with findings and recommendations |
-
-## 🛠️ Supported Stacks
-
-| Layer | Supported |
-|-------|-----------|
-| Language | Node.js, Python, Go, Ruby, etc. |
-| Framework | grammY, Telegraf, aiogram, python-telegram-bot, telebot, etc. |
-| Data Store | PostgreSQL, MongoDB, Redis, SQLite, none |
-| Deployment | Docker, PM2, systemd, bare process, serverless |
-
-## 🔒 Works Without Backend Access
-
-No access to the database or logs? The skill won't break — it will skip data verification and log analysis phases, and focus on browser-based testing: sending commands, clicking buttons, and verifying bot responses visually.
-
 ## 📥 Installation
 
 <details>
@@ -105,3 +81,27 @@ Resulting structure:
 └── scripts/
     └── validate_query.sh
 ```
+
+## ⚙️ How It Works
+
+| Phase | Description |
+|-------|-------------|
+| 1. Reconnaissance | Reads bot code to map commands, handlers, data store, and expected behavior |
+| 2. Environment Check | Verifies the bot process and data store are running |
+| 3. Browser Interaction | Opens the bot in Telegram Web, sends commands, clicks buttons |
+| 4. Data Verification | Cross-references UI responses with actual DB/store records |
+| 5. Log Analysis | Checks for exceptions, API errors, and warnings |
+| 6. Test Report | Outputs a structured verdict with findings and recommendations |
+
+## 🛠️ Supported Stacks
+
+| Layer | Supported |
+|-------|-----------|
+| Language | Node.js, Python, Go, Ruby, etc. |
+| Framework | grammY, Telegraf, aiogram, python-telegram-bot, telebot, etc. |
+| Data Store | PostgreSQL, MongoDB, Redis, SQLite, none |
+| Deployment | Docker, PM2, systemd, bare process, serverless |
+
+## 🔒 Works Without Backend Access
+
+No access to the database or logs? The skill won't break — it will skip data verification and log analysis phases, and focus on browser-based testing: sending commands, clicking buttons, and verifying bot responses visually.
