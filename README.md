@@ -63,6 +63,10 @@ Or just describe what you need in natural language:
 | Data Store | PostgreSQL, MongoDB, Redis, SQLite, none |
 | Deployment | Docker, PM2, systemd, bare process, serverless |
 
+## 🔒 Works Without Backend Access
+
+No access to the database or logs? The skill won't break — it will skip data verification and log analysis phases, and focus on browser-based testing: sending commands, clicking buttons, and verifying bot responses visually.
+
 ## 📥 Installation
 
 <details>
