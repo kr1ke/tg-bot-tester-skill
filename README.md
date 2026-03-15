@@ -6,6 +6,8 @@ Claude Code skill for **end-to-end testing** Telegram bots via browser automatio
 
 Interacts through Telegram Web — sends commands, clicks inline buttons, reads responses — then verifies against data stores and logs. Stack-agnostic: works with any language, framework, database, and deployment method.
 
+### 🎬 Demo
+
 https://github.com/kr1ke/tg-bot-tester-skill/raw/main/tg-test-skill.mp4
 
 ## ✨ Features
