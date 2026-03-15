@@ -6,7 +6,7 @@
 
 Взаимодействует через Telegram Web — отправляет команды, нажимает инлайн-кнопки, читает ответы — затем сверяет результаты с базой данных и логами. Работает с любым языком, фреймворком, БД и способом деплоя.
 
-https://github.com/user-attachments/assets/PLACEHOLDER_VIDEO
+https://github.com/kr1ke/tg-bot-tester-skill/raw/main/tg-test-skill.mp4
 
 ## ✨ Возможности
 
@@ -66,25 +66,28 @@ https://github.com/user-attachments/assets/PLACEHOLDER_VIDEO
 ## 📥 Установка
 
 <details>
-<summary><b>Claude Code</b></summary>
-
-Скопируйте содержимое папки `skill/` в директорию скиллов вашего проекта:
+<summary><b>На уровне проекта</b> (только этот проект)</summary>
 
 ```bash
-# Клонируйте репозиторий
 git clone https://github.com/kr1ke/tg-bot-tester-skill.git /tmp/tg-bot-tester-skill
-
-# Скопируйте в проект (скилл уровня проекта)
 mkdir -p .claude/skills/telegram-bot-tester
 cp -r /tmp/tg-bot-tester-skill/skill/* .claude/skills/telegram-bot-tester/
-
-# Или установите глобально (доступен во всех проектах)
-mkdir -p ~/.claude/skills/telegram-bot-tester
-cp -r /tmp/tg-bot-tester-skill/skill/* ~/.claude/skills/telegram-bot-tester/
-
-# Очистка
 rm -rf /tmp/tg-bot-tester-skill
 ```
+
+</details>
+
+<details>
+<summary><b>Глобально</b> (доступен во всех проектах)</summary>
+
+```bash
+git clone https://github.com/kr1ke/tg-bot-tester-skill.git /tmp/tg-bot-tester-skill
+mkdir -p ~/.claude/skills/telegram-bot-tester
+cp -r /tmp/tg-bot-tester-skill/skill/* ~/.claude/skills/telegram-bot-tester/
+rm -rf /tmp/tg-bot-tester-skill
+```
+
+</details>
 
 Итоговая структура:
 
@@ -96,60 +99,3 @@ rm -rf /tmp/tg-bot-tester-skill
 └── scripts/
     └── validate_query.sh
 ```
-
-</details>
-
-<details>
-<summary><b>Cursor</b></summary>
-
-Cursor использует `.cursor/rules/` для пользовательских инструкций:
-
-```bash
-git clone https://github.com/kr1ke/tg-bot-tester-skill.git /tmp/tg-bot-tester-skill
-
-mkdir -p .cursor/rules
-cp /tmp/tg-bot-tester-skill/skill/SKILL.md .cursor/rules/telegram-bot-tester.md
-
-rm -rf /tmp/tg-bot-tester-skill
-```
-
-> Примечание: Cursor не поддерживает многофайловые скиллы с references. Основной SKILL.md будет работать, но references не загрузятся автоматически.
-
-</details>
-
-<details>
-<summary><b>Windsurf</b></summary>
-
-Windsurf использует `.windsurf/rules/` или `AGENTS.md`:
-
-```bash
-git clone https://github.com/kr1ke/tg-bot-tester-skill.git /tmp/tg-bot-tester-skill
-
-mkdir -p .windsurf/rules
-cp /tmp/tg-bot-tester-skill/skill/SKILL.md .windsurf/rules/telegram-bot-tester.md
-
-rm -rf /tmp/tg-bot-tester-skill
-```
-
-</details>
-
-<details>
-<summary><b>Cline</b></summary>
-
-Cline использует `.clinerules` или настройки расширения:
-
-```bash
-git clone https://github.com/kr1ke/tg-bot-tester-skill.git /tmp/tg-bot-tester-skill
-
-# Скопируйте содержимое SKILL.md в .clinerules или вставьте в
-# настройки расширения Cline → Custom Instructions
-cat /tmp/tg-bot-tester-skill/skill/SKILL.md >> .clinerules
-
-rm -rf /tmp/tg-bot-tester-skill
-```
-
-</details>
-
-## 📄 Лицензия
-
-MIT
